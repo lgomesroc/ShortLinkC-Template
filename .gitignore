@@ -1,0 +1,50 @@
+# Build Folders
+bin/
+obj/
+
+# Visual Studio Code files
+.vscode/
+
+# Rider files
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+*.sln.ide
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Visual Studio temporary files
+*.vs/
+
+# Visual Studio Code settings
+.vscode/
+
+# DotNet specific
+project.lock.json
+project.fragment.lock.json
+*.ncb
+*.sdf
+*.suo
+*.opensdf
+*.sln.docstates
+*.sln.ide
+*.sln.iml
+
+# Backup files
+*~ 
+*.bak
+
+# Logs
+*.log
+
+# Miscellaneous
+*.dSYM/
+*.db
+*.pdb
+*.tgz
+*.zip

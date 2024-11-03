@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encurtador de Link</title>
+</head>
+<body>
+    <h1>Encurtador de Link</h1>
+    <form id="shorten-form">
+        <label for="url">Insira o link original:</label>
+        <input type="url" id="url" name="url" required>
+        <button type="submit">Encurtar</button>
+    </form>
+    <div id="shortened-link"></div>
+    
+    <script>
+        document.getElementById('shorten-form').onsubmit = async (e) => {
+            e.preventDefault();
+            const url = document.getElementById('url').value;
+            const response = await fetch(`/api/link/shorten?originalUrl=${encodeURIComponent(url)}`);
+            const result = await response.text();
+            document.getElementById('shortened-link').innerHTML = result;
+        };
+    </script>
+</body>
+</html>
